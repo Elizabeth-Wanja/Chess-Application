@@ -1,0 +1,22 @@
+{
+  "chessboard": [
+    {
+      "piece": "pawn",
+      "colour": "white",
+      "position": "a3",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "piece": "knight",
+      "colour": "black",
+      "position": "b8"
+    },
+    {
+      "id": "3",
+      "piece": "king",
+      "colour": "white",
+      "position": "e1"
+    }
+  ]
+}

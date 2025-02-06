@@ -1,0 +1,84 @@
+ /* General reset */
+ body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+/* Chessboard container */
+#chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 equal columns */
+  grid-template-rows: repeat(8, 1fr);   /* 8 equal rows */
+  width: 400px; /* Set the size of the chessboard */
+  height: 400px;
+  border: 2px solid #333; /* Optional border for the chessboard */
+  margin-top: 20px;
+}
+
+/* Individual tiles */
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tile colors based on data-color attribute */
+.tile[data-color="light"] {
+  background-color: #f0d9b5; /* Light tile */
+}
+
+.tile[data-color="dark"] {
+  background-color: #b58863; /* Dark tile */
+}
+
+/* Chess pieces styling */
+.tile span {
+  font-size: 36px;
+  font-weight: bold;
+  display: inline-block;
+  width: 80%; /* Centering within the tile */
+  height: 80%;
+  text-align: center;
+  line-height: 80%; /* Align vertically */
+  border-radius: 50%; /* Rounded look */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* White pieces */
+.tile span[data-color="white"] {
+  color: white;
+  background-color: #666; /* Contrasting background */
+}
+
+/* Black pieces */
+.tile span[data-color="black"] {
+  color: black;
+  background-color: #fff; /* Contrasting background */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  #chessboard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .tile span {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+}
+
+.tile:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.tile.active {
+  outline: 2px solid red;
+}
